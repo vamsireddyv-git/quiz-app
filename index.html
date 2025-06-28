@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QuizQuest</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="app-container">
+      <div id="home-page" class="page active">
+        <div class="text-center header">
+          <h1 class="title">QuizQuest</h1>
+          <p class="description">Test your knowledge in various web development topics!</p>
+        </div>
+
+        <div class="content-box">
+          <h2 class="section-title">How to play:</h2>
+          <ol class="instructions">
+            <li>Select a quiz category below</li>
+            <li>Answer each question by selecting one option</li>
+            <li>Get immediate feedback on your answers</li>
+            <li>Complete all questions to see your final score</li>
+          </ol>
+
+          <div class="form-group">
+            <label for="category" class="form-label">Choose a category:</label>
+            <select id="category" class="select-input">
+              <option value="">Select a category</option>
+              <option value="html">HTML</option>
+              <option value="css">CSS</option>
+              <option value="javascript">JavaScript</option>
+            </select>
+          </div>
+
+          <button id="start-button" class="btn btn-primary" disabled>Start Quiz</button>
+        </div>
+      </div>
+      <div id="quiz-page" class="page">
+        <div class="quiz-header">
+          <h2 id="quiz-category" class="quiz-title">Quiz</h2>
+          <div class="quiz-info">
+            Question <span id="current-question">1</span> of <span id="total-questions">5</span>
+          </div>
+        </div>
+        
+        <div class="progress-bar">
+          <div id="progress-indicator" class="progress-indicator"></div>
+        </div>
+
+        <div class="content-box">
+          <h3 id="question-text" class="question">Question text will appear here</h3>
+
+          <div id="options-container" class="options-container">
+          </div>
+
+          <button id="check-answer" class="btn btn-primary" disabled>Check Answer</button>
+          <button id="next-question" class="btn btn-primary hidden">Next Question</button>
+        </div>
+      </div>
+      <div id="results-page" class="page">
+        <div class="text-center header">
+          <h1 class="title">Quiz Results</h1>
+        </div>
+
+        <div class="content-box text-center">
+          <h2 id="result-category" class="section-title">Quiz</h2>
+          
+          <div class="score-container">
+            <div id="score-display" class="score">0/0</div>
+            <div id="percentage-display" class="percentage">0%</div>
+            <div id="feedback-message" class="feedback">Keep learning!</div>
+          </div>
+
+          <div class="button-group">
+            <button id="retry-button" class="btn btn-primary">Retry Quiz</button>
+            <button id="home-button" class="btn btn-secondary">Try Another Category</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
